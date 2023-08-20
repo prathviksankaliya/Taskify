@@ -17,6 +17,8 @@ namespace Taskify
 
         public static string static_day;
         static String connString = "server=localhost;Uid=root;Pwd='';Port=3307;database=db_calendar;sslmode=none";
+        public static bool isUpdate  = false;
+        public static string prevEvent;
 
         public UserControlDays()
         {
@@ -25,7 +27,7 @@ namespace Taskify
 
         private void UserControlDays_Load(object sender, EventArgs e)
         {
-
+            displayEvents();
         }
 
         public void days(int numday)
@@ -38,8 +40,15 @@ namespace Taskify
             static_day = lbdays.Text;
             //start timer if usercontrolday is clicked
             timer1.Start();
+            if (lbevent.Text != "")
+            {
+                isUpdate = true;
+                prevEvent = lbevent.Text;
+            }
+
             EventForm eventForm = new EventForm();
             eventForm.Show();
+            
         }
 
         //create a new method to display event
@@ -61,13 +70,10 @@ namespace Taskify
             conn.Close();
         }
 
-        //Create a timer for auto display event if new event added
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             //call displayEvent method
             displayEvents();
         }
-
-        
     }
 }

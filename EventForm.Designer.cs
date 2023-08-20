@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnsave = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txdate
@@ -83,11 +84,24 @@
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
+            // btndelete
+            // 
+            this.btndelete.Font = new System.Drawing.Font("Shruti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.Location = new System.Drawing.Point(135, 219);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(93, 35);
+            this.btndelete.TabIndex = 6;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Visible = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 281);
+            this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -109,5 +123,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.Button btndelete;
     }
 }

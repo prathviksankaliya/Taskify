@@ -46,15 +46,15 @@
             // 
             // lbevent
             // 
-            this.lbevent.Location = new System.Drawing.Point(3, 53);
+            this.lbevent.Location = new System.Drawing.Point(3, 63);
             this.lbevent.Name = "lbevent";
-            this.lbevent.Size = new System.Drawing.Size(162, 51);
+            this.lbevent.Size = new System.Drawing.Size(162, 41);
             this.lbevent.TabIndex = 1;
             this.lbevent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // UserControlDays
             // 
