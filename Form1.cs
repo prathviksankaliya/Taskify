@@ -14,6 +14,9 @@ namespace Taskify
     public partial class Form1 : Form
     {
         int month, year;
+        //lets create the static varibale so we can pass to another form for month and year.
+        public static int static_month, static_year;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +37,9 @@ namespace Taskify
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
+
+            static_month = month;
+            static_year = year;
 
             DateTime startofmonth = new DateTime(year, month, 1);
 
@@ -66,6 +72,9 @@ namespace Taskify
 
             //decreament month
             month--;
+            static_month = month;
+            static_year = year;
+
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
             DateTime startofmonth = new DateTime(year, month, 1);
@@ -99,6 +108,9 @@ namespace Taskify
 
             //increament month
             month++;
+
+            static_month = month;
+            static_year = year;
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;

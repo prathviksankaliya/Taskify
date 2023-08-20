@@ -12,6 +12,8 @@ namespace Taskify
 {
     public partial class UserControlDays : UserControl
     {
+        //lets create another static variable for days
+        public static string static_day;
         public UserControlDays()
         {
             InitializeComponent();
@@ -25,6 +27,13 @@ namespace Taskify
         public void days(int numday)
         {
             lbdays.Text = numday.ToString();
+        }
+
+        private void UserControlDays_Click(object sender, EventArgs e)
+        {
+            static_day = lbdays.Text;
+            EventForm eventForm = new EventForm();
+            eventForm.Show();
         }
     }
 }
