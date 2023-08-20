@@ -39,6 +39,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.LBDATE = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // daycontainer
@@ -50,9 +51,9 @@
             // 
             // btnnext
             // 
-            this.btnnext.Location = new System.Drawing.Point(1162, 830);
+            this.btnnext.Location = new System.Drawing.Point(1162, 821);
             this.btnnext.Name = "btnnext";
-            this.btnnext.Size = new System.Drawing.Size(75, 23);
+            this.btnnext.Size = new System.Drawing.Size(75, 40);
             this.btnnext.TabIndex = 0;
             this.btnnext.Text = "Next";
             this.btnnext.UseVisualStyleBackColor = true;
@@ -60,9 +61,9 @@
             // 
             // btnprevious
             // 
-            this.btnprevious.Location = new System.Drawing.Point(1081, 830);
+            this.btnprevious.Location = new System.Drawing.Point(1081, 821);
             this.btnprevious.Name = "btnprevious";
-            this.btnprevious.Size = new System.Drawing.Size(75, 23);
+            this.btnprevious.Size = new System.Drawing.Size(75, 40);
             this.btnprevious.TabIndex = 1;
             this.btnprevious.Text = "Previous";
             this.btnprevious.UseVisualStyleBackColor = true;
@@ -149,11 +150,26 @@
             this.LBDATE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBDATE.UseWaitCursor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Shruti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1212, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 32);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 879);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LBDATE);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -188,6 +204,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LBDATE;
+        private System.Windows.Forms.Button button1;
     }
 }
 

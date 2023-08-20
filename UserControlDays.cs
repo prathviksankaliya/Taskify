@@ -46,7 +46,7 @@ namespace Taskify
                 prevEvent = lbevent.Text;
             }
 
-            EventForm eventForm = new EventForm();
+            EventForm eventForm = new EventForm(lbevent);
             eventForm.Show();
             
         }

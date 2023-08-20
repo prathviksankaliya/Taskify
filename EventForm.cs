@@ -17,12 +17,13 @@ namespace Taskify
         //create connection String
         static String connString = "server=localhost;Uid=root;Pwd='';Port=3307;database=db_calendar;sslmode=none";
         MySqlConnection conn;
-
+        Label lblDays;
         public static bool isDelete = false;
 
-        public EventForm()
+        public EventForm(Label lblDays)
         {
             InitializeComponent();
+            this.lblDays = lblDays;
             conn = new MySqlConnection(connString);
         }
 
@@ -97,8 +98,7 @@ namespace Taskify
             cmd.Parameters.AddWithValue("date", txdate.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Delete Notes");
-            isDelete = true;
-            EventForm eventForm = new EventForm();
+            lblDays.Text = "";
             this.Dispose();
             cmd.Dispose();
             conn.Close();
